@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "/": "./",
+    "./": "./",
+    "asserts": "https://deno.land/std@0.167.0/testing/asserts.ts",
+    "mock": "https://deno.land/std@0.167.0/testing/mock.ts",
+    "time": "https://deno.land/std@0.167.0/testing/time.ts"
+  }
+}
