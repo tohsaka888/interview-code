@@ -3,7 +3,7 @@
 ## 列表
 
 - [手写节流函数](/throttle/)
-- 手写防抖函数
+- [手写防抖函数](/debounce/)
 - [手写`Promise.all`](/Promise.all/)
 
 ## 测试全部用例
