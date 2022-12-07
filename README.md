@@ -1,10 +1,20 @@
 # JS 面试手撕代码题
 
-## 列表
+## 已完成列表
 
 - [手写节流函数](/throttle/)
 - [手写防抖函数](/debounce/)
 - [手写`Promise.all`](/Promise.all/)
+
+## TODO
+
+- 手写`Promise.race`
+- 手写`Promise.allSettled`
+- 手写`Promise.any`
+- 手写浅拷贝
+- 手写深拷贝
+- 手写`instanceof`
+- 手写`call/apply/bind`
 
 ## 测试全部用例
 
