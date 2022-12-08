@@ -1,6 +1,5 @@
 /**
- * 手写Promise.race
- * @date 2022-12-08
+ * 手写 Promise.race
  * @param {any} iterable
  * @returns {any}
  */
