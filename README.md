@@ -5,10 +5,10 @@
 - [手写节流函数](/throttle/)
 - [手写防抖函数](/debounce/)
 - [手写`Promise.all`](/Promise.all/)
+- 手写`Promise.race`
 
 ## TODO
 
-- 手写`Promise.race`
 - 手写`Promise.allSettled`
 - 手写`Promise.any`
 - 手写浅拷贝
