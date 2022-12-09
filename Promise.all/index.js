@@ -8,20 +8,24 @@
  */
 
 function myPromiseAll(iterable) {
-  const promiseArray = Array.from(iterable)
-  const results = []
+  const promiseArray = Array.from(iterable);
+  const results = [];
+  let count = 0;
   return new Promise((resolve, reject) => {
     promiseArray.forEach((promise, idx) => {
-      promise.then((val) => {
-        results[idx] = val;
-        if (idx === promiseArray.length - 1) {
-          resolve(results)
-        }
-      }).catch(e => {
-        reject(e)
-      })
-    })
-  })
+      promise
+        .then((val) => {
+          results[idx] = val;
+          count++;
+          if (count === promiseArray.length) {
+            resolve(results);
+          }
+        })
+        .catch((e) => {
+          reject(e);
+        });
+    });
+  });
 }
 
-export default myPromiseAll
+export default myPromiseAll;
