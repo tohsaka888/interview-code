@@ -6,11 +6,12 @@
 - [手写防抖函数](/debounce/)
 - [手写`Promise.all`](/Promise.all/)
 - [手写`Promise.race`](/Promise.race/)
+- [手写`Promise.any`](/Promise.any/)
+- 手写`Promise.allSettled`
 
 ## TODO
 
-- 手写`Promise.allSettled`
-- 手写`Promise.any`
+
 - 手写浅拷贝
 - 手写深拷贝
 - 手写`instanceof`
