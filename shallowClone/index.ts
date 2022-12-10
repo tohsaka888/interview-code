@@ -8,15 +8,10 @@ function shallowClone<T>(object: T): T {
     return object;
   }
 
-  // deno-lint-ignore no-explicit-any
-  const clonedObject: any = Array.isArray(object) ? [] : {};
-
-  Object.keys(object).forEach((key) => {
-    if (Object.prototype.hasOwnProperty.call(object, key)) {
-      // deno-lint-ignore no-explicit-any
-      clonedObject[key] = (object as any)[key];
-    }
-  });
+  const clonedObject = Object.create(
+    Object.getPrototypeOf(object),
+    Object.getOwnPropertyDescriptors(object)
+  );
 
   return clonedObject as T;
 }

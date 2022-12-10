@@ -11,13 +11,11 @@ function shallowClone(object) {
   if (!object || typeof object !== "object") {
     return object;
   }
-  const clonedObject = Array.isArray(object) ? [] : {};
-  Object.keys(object).forEach((key) => {
-    // 是否为自身属性,也就是说不复制继承的属性
-    if (Object.prototype.hasOwnProperty.call(object, key)) {
-      clonedObject[key] = object[key];
-    }
-  });
+
+  const clonedObject = Object.create(
+    Object.getPrototypeOf(object),
+    Object.getOwnPropertyDescriptors(object)
+  );
   return clonedObject;
 }
 
