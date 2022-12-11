@@ -10,10 +10,10 @@
 - [手写`Promise.allSettled`](/Promise.allSettled/)
 - [手写浅拷贝](/shallowClone/)
 - [手写深拷贝](/deepClone/)
+- [手写`instanceof`](/instanceof/)
 
 ## TODO
 
-- 手写`instanceof`
 - 手写`call/apply/bind`
 
 ## 测试全部用例
