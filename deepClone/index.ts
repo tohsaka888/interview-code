@@ -31,11 +31,11 @@ function deepClone<T = unknown>(object: T): T {
       Object.getOwnPropertyDescriptors(object)
     );
 
+    map.set(object as Record<string, unknown>, clonedObject);
+
     Object.keys(object as Record<string, unknown>).forEach((key) => {
       const property = (object as Record<string, unknown>)[key];
-      clonedObject[key] = isObject(property)
-        ? baseClone(property as T)
-        : property;
+      clonedObject[key] = baseClone(property as T);
     });
 
     return clonedObject;
