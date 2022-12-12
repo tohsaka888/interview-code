@@ -1,4 +1,11 @@
-function myInstanceOf(object, target) {
+/**
+ * 手写instanceof
+ * @date 2022-12-12
+ * @param {Object} object
+ * @param {new (...args: any[]) => T} target
+ * @returns {boolean}
+ */
+function myInstanceof(object, target) {
   if (!object || (typeof object !== "object" && typeof object !== "function")) {
     return false;
   }
@@ -8,13 +15,14 @@ function myInstanceOf(object, target) {
   }
 
   const objectProto = Object.getPrototypeOf(object);
+
   if (objectProto === null) {
     return false;
   } else if (objectProto === target.prototype) {
     return true;
   } else {
-    return myInstanceOf(objectProto, target);
+    return myInstanceof(objectProto, target);
   }
 }
 
-export default myInstanceOf;
+export default myInstanceof;
