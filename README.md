@@ -11,10 +11,12 @@
 - [手写浅拷贝](/shallowClone/)
 - [手写深拷贝](/deepClone/)
 - [手写`instanceof`](/instanceof/)
+- [手写`call`](/call/)
 
 ## TODO
 
-- 手写`call/apply/bind`
+- 手写`apply`
+- 手写`bind`
 
 ## 测试全部用例
 
