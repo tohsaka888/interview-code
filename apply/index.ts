@@ -1,7 +1,9 @@
-function myApply(thisArg, args) {
+// deno-lint-ignore no-explicit-any
+function myApply(this: (...args: any[]) => any, thisArg: any, args: any[]) {
   if (typeof this !== "function") {
-    throw new TypeError("error: expected a function");
+    throw new TypeError("typeerror");
   }
+
   const funKey = Symbol("funkey");
   thisArg[funKey] = this;
   const result = thisArg[funKey](...args);
