@@ -1,12 +1,20 @@
+/**
+ * 描述
+ * @date 2023-02-06
+ * @param {any} fn
+ * @param {any} interval
+ * @returns {any}
+ */
 function debounce(fn, interval) {
   let timer = null;
   let lastRunTime = -1
 
   return function (...args) {
-    if (Date.now() - lastRunTime < interval) {
+    const currentTime = Date.now();
+    if (currentTime - lastRunTime < interval) {
       clearInterval(timer)
     }
-    lastRunTime = Date.now();
+    lastRunTime = currentTime;
     timer = setTimeout(() => {
       fn.apply(this, args)
     }, interval)
